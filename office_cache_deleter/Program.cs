@@ -25,7 +25,7 @@ namespace office_cache_deleter
                 foreach (string file in files)
                 {
                     var fi = new FileInfo(file);
-                    if (fi.LastAccessTime < DateTime.Now.AddMinutes(maxAgeMinutes))
+                    if (fi.LastWriteTime < DateTime.Now.AddMinutes(-maxAgeMinutes))
                     {
                         try
                         {
