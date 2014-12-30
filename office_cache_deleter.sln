@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "office_cache_deleter", "office_cache_deleter\office_cache_deleter.csproj", "{EDA6F11D-322A-4A10-9433-29D0E945581C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDA6F11D-322A-4A10-9433-29D0E945581C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA6F11D-322A-4A10-9433-29D0E945581C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA6F11D-322A-4A10-9433-29D0E945581C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA6F11D-322A-4A10-9433-29D0E945581C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
