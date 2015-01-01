@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
@@ -43,8 +44,8 @@ namespace OfficeCacheCleanerService
 
         private void HandleTick(object sender, ElapsedEventArgs e)
         {
-            var files = Directory.GetFiles(_cacheDir).Where(file => Regex.IsMatch(file, @"^.+\.(FSD|FSF)$")).ToArray();
-            Log(string.Format("Found {0} files", files.Length));
+            var files = GetCacheFiles();
+            Log(string.Format("Found {0} files", files.Count));
 
             var deletedCount = 0;
             foreach (string file in files)
@@ -66,6 +67,22 @@ namespace OfficeCacheCleanerService
             }
 
             Log(string.Format("Deleted Totally {0} files this iteration", deletedCount));
+        }
+
+        private List<string> GetCacheFiles()
+        {
+            var result = new List<string>();
+
+            try
+            {
+                result.AddRange(Directory.GetFiles(_cacheDir).Where(file => Regex.IsMatch(file, @"^.+\.(FSD|FSF)$")));
+            }
+            catch (Exception exception)
+            {
+                Log(exception.Message);
+            }
+
+            return result;
         }
 
         protected override void OnStop()

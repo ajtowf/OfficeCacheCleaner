@@ -113,6 +113,62 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_05322333100D4E4A8383482547E2BE2F"
+            {
+            "Name" = "8:Primary output from OfficeCacheCleanerService (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_820D705C2B17493D9E95758A775A1126"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_1BA6C024_F576_4A08_9611_6A9B468F23CB"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_63809993CBA24A66A8F61F7E7CFA9042"
+            {
+            "Name" = "8:Primary output from OfficeCacheCleanerService (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_820D705C2B17493D9E95758A775A1126"
+            "FileType" = "3:2"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_4F2CE02F_59CE_4D5C_8267_87CD10AC57DF"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_6883C04E3D714A8D821CE4381A78C550"
+            {
+            "Name" = "8:Primary output from OfficeCacheCleanerService (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_820D705C2B17493D9E95758A775A1126"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_921EEF1B_E44D_489A_B08E_4FE10354B11C"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8CB8C9C045DA4D2D8AF03697E4593713"
+            {
+            "Name" = "8:Primary output from OfficeCacheCleanerService (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_820D705C2B17493D9E95758A775A1126"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_F5009E51_DB26_4DA0_A3C7_7CF7EE305B4E"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -286,7 +342,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Office Cache Cleaner"
         "ProductCode" = "8:{45E06E84-3CCE-4551-A95C-B878887702B0}"
-        "PackageCode" = "8:{7A81B0A4-F623-4552-8907-0834D6CB20FC}"
+        "PackageCode" = "8:{D2AC78BE-F648-44E7-9F50-223181100B86}"
         "UpgradeCode" = "8:{3A6D5275-E1FD-4F59-807E-0795DACB71CC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

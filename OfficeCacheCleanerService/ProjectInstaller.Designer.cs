@@ -40,6 +40,7 @@
             // serviceInstaller
             // 
             this.serviceInstaller.ServiceName = "Office Cache Cleaner";
+            this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
