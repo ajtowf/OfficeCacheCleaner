@@ -43,8 +43,6 @@ namespace OfficeCacheCleanerService
 
         private void HandleTick(object sender, ElapsedEventArgs e)
         {
-            Log("Ticked");
-
             var files = Directory.GetFiles(_cacheDir).Where(file => Regex.IsMatch(file, @"^.+\.(FSD|FSF)$")).ToArray();
             Log(string.Format("Found {0} files", files.Length));
 
