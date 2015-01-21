@@ -35,11 +35,18 @@ namespace OfficeCacheCleanerService
 
         protected override void OnStart(string[] args)
         {
-            _timer = new Timer(60 * 1000);
-            _timer.Elapsed += HandleTick;
-            _timer.Enabled = true;
+            if (Directory.Exists(_cacheDir))
+            {
+                _timer = new Timer(60*1000);
+                _timer.Elapsed += HandleTick;
+                _timer.Enabled = true;
 
-            Log("Office Cache Cleaner Started");
+                Log("Office Cache Cleaner Started");
+            }
+            else
+            {
+                Log(string.Format("Couldn't find the directory: {0}", _cacheDir));
+            }
         }
 
         private void HandleTick(object sender, ElapsedEventArgs e)
