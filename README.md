@@ -20,6 +20,7 @@ After installing the MSI, you need to configure the service and start it.
 <li>Open <i>OfficeCacheCleanerService.exe.config</i> with notepad</li>
 <li>Change the path <i>C:\Users\Ajden\AppData\Local\Microsoft\Office\15.0\OfficeFileCache</i> to your path. You'll probably just need to change the username <i>Ajden</i></li>
 <li>Optional: Change how old files can get in minutes before automatically deleting them, default is 5 minutes.</li>
+<li>Optional: Configure how often the cleaner runs, default is every minute.</li>
 </ol>
 <h2>Start the service</h2>
 <p>The service will start automatically next time you reboot, if you wan't to do it manually follow these steps.
