@@ -17,10 +17,12 @@ namespace OfficeCacheCleanerService
     {
         private const string OfficeCacheFolderKey = "OfficeCacheFolder";
         private const string LastAccessTimeMinutesBeforeDeleteKey = "LastAccessTimeMinutesBeforeDelete";
+        private const string CleanIntervalMinutes = "CleanIntervalMinutes";
         
         private readonly LogWriter _logger;
         private readonly string _cacheDir;
         private readonly int _maxAgeMinutes;
+        private readonly int _cleanIntervalMinutes;
         
         private Timer _timer;
 
@@ -31,13 +33,14 @@ namespace OfficeCacheCleanerService
 
             _cacheDir = ConfigurationManager.AppSettings[OfficeCacheFolderKey];
             _maxAgeMinutes = int.Parse(ConfigurationManager.AppSettings[LastAccessTimeMinutesBeforeDeleteKey]);
+            _cleanIntervalMinutes = int.Parse(ConfigurationManager.AppSettings[CleanIntervalMinutes]);
         }
 
         protected override void OnStart(string[] args)
         {
             if (Directory.Exists(_cacheDir))
             {
-                _timer = new Timer(60*1000);
+                _timer = new Timer(_cleanIntervalMinutes * 60 * 1000);
                 _timer.Elapsed += HandleTick;
                 _timer.Enabled = true;
 
